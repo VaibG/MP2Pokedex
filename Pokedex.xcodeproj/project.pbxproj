@@ -28,6 +28,8 @@
 		809BD1D2214C9E9300E03408 /* MultipleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809BD1CC214C9E9300E03408 /* MultipleViewController.swift */; };
 		809BD1D3214C9E9300E03408 /* MultipleViewController - TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809BD1CD214C9E9300E03408 /* MultipleViewController - TableView.swift */; };
 		809BD1D4214C9E9300E03408 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809BD1CE214C9E9300E03408 /* ProfileViewController.swift */; };
+		809BD1D6214CA29100E03408 /* SearchViewController  - CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809BD1D5214CA29100E03408 /* SearchViewController  - CollectionView.swift */; };
+		809BD1D8214CA2D900E03408 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809BD1D7214CA2D900E03408 /* TypeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		809BD1CC214C9E9300E03408 /* MultipleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleViewController.swift; sourceTree = "<group>"; };
 		809BD1CD214C9E9300E03408 /* MultipleViewController - TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MultipleViewController - TableView.swift"; sourceTree = "<group>"; };
 		809BD1CE214C9E9300E03408 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		809BD1D5214CA29100E03408 /* SearchViewController  - CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController  - CollectionView.swift"; sourceTree = "<group>"; };
+		809BD1D7214CA2D900E03408 /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 				809BD1CE214C9E9300E03408 /* ProfileViewController.swift */,
 				809BD1CB214C9E9300E03408 /* SearchViewController - UI Elements.swift */,
 				809BD1C9214C9E9200E03408 /* SearchViewController.swift */,
+				809BD1D5214CA29100E03408 /* SearchViewController  - CollectionView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				809BD1B7214C9B0C00E03408 /* pokeData.json */,
 				809BD1B8214C9B0C00E03408 /* Pokemon.swift */,
 				809BD1BA214C9B0C00E03408 /* PokemonGenerator.swift */,
+				809BD1D7214CA2D900E03408 /* TypeCell.swift */,
 			);
 			path = Mode;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				809BD1BD214C9B0C00E03408 /* Pokemon.swift in Sources */,
+				809BD1D8214CA2D900E03408 /* TypeCell.swift in Sources */,
 				809BD1CF214C9E9300E03408 /* SearchViewController.swift in Sources */,
 				809BD179214C996C00E03408 /* Pokedex.xcdatamodeld in Sources */,
 				809BD1BF214C9B0C00E03408 /* PokemonGenerator.swift in Sources */,
@@ -337,6 +344,7 @@
 				809BD1D2214C9E9300E03408 /* MultipleViewController.swift in Sources */,
 				809BD171214C996C00E03408 /* AppDelegate.swift in Sources */,
 				809BD1D0214C9E9300E03408 /* MultipleViewController - CollectionView.swift in Sources */,
+				809BD1D6214CA29100E03408 /* SearchViewController  - CollectionView.swift in Sources */,
 				809BD1D1214C9E9300E03408 /* SearchViewController - UI Elements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

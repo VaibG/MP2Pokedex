@@ -42,7 +42,6 @@ class ProfileViewController: UIViewController {
         title()
         createLabel()
         createImage()
-        //createWebButton()
     }
     
     func setupBackground() {

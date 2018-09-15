@@ -47,9 +47,16 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     //Background
     var backgroundImageView: UIImageView!
     
-   
+    //collectionview
+    var typeCollection: UICollectionView!
+    var pokemonTypeNames: [String]!
+    var pokemonTypeImages: [UIImage]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        pokemonTypeNames = ["bug", "grass", "dark", "ground", "dragon", "ice", "electric", "normal", "fairy", "poison", "fighting", "psychic", "fire", "rock", "flying", "steel", "ghost", "water"]
+        pokemonTypeImages = [#imageLiteral(resourceName: "bug"), #imageLiteral(resourceName: "grass"), #imageLiteral(resourceName: "dark"), #imageLiteral(resourceName: "ground"), #imageLiteral(resourceName: "dragon"), #imageLiteral(resourceName: "ice"), #imageLiteral(resourceName: "electric"), #imageLiteral(resourceName: "normal"), #imageLiteral(resourceName: "fairy"), #imageLiteral(resourceName: "poison"), #imageLiteral(resourceName: "fighting"), #imageLiteral(resourceName: "psycic"), #imageLiteral(resourceName: "fire"), #imageLiteral(resourceName: "rock"), #imageLiteral(resourceName: "steel"), #imageLiteral(resourceName: "ghost"), #imageLiteral(resourceName: "water")]
+
         minAttack = 0
         minDefense = 0
         minHealth = 0
@@ -65,6 +72,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         createSearchButton()
         createTextFields()
         setupBackground()
+        createCollectionView()
         // Do any additional setup after loading the view.
     }
     
@@ -72,6 +80,22 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func createCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
+        typeCollection = UICollectionView(frame: CGRect(x: typeLabel.frame.minX, y: typeLabel.frame.minY + 30, width: typeLabel.frame.width, height: typeLabel.frame.height - 30), collectionViewLayout: layout)
+        typeCollection.dataSource = self
+        typeCollection.delegate = self
+        typeCollection.backgroundColor = .white
+        typeCollection.register(TypeCell.self, forCellWithReuseIdentifier: "typeCell")
+        view.addSubview(typeCollection)
+        view.bringSubview(toFront: typeCollection)
+        
+    }
+    
+    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         pokeSearchText = pokeSearchBar.text
